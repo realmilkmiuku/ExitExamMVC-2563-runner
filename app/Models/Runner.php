@@ -11,7 +11,7 @@ class Runner extends Model
 
     protected $primary = 'runner_id';
 
-    protected $fillable = [
+    protected $fillable = [ //การจำชื่อตาราง และ col ของ laravel โดยต้องกำหนดชื่อเดียวกันกับตอนสร้าง migration
         'runner_id',
         'Firstname',
         'Lastname',

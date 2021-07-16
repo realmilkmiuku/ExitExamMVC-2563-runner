@@ -16,7 +16,24 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
+/* 
+การไปหน้าเว็บ หรือขอ request พร้อมกับรอรับข้อมูลจาก form 
+โดยใช้คำสั่ง get '/home' request นี้จึงเรียก func 'home 'ใน myController 
+func 'home 'ใน controller คือการ return view 'home.blade.php' กลับมาตาม request
+get '/url' อื่นๆ ก็เช่นเดียวกัน ซึ่งการ return view ถูกกำหนดตาม func แต่ละตัวใน controller
+*/
 
+//->name('index') = ตั้งชื่อสำหรับเรียกใช้ใน myController
+
+/* 
+การไปหน้าเว็บที่แสดงข้อมูลที่มีตัวแปลที่รับมาจาก form ui หน้านั้นๆ หรือการส่งข้อมูลกลับไปยังที่ที่มีข้อมูลอยู่แล้ว โดยใช้คำสั่ง post '/url'   
+ยกตัวอย่าง เช่น มีการลงทะเบียนจาก form ui มีคำสั่ง ดังนี้
+    <form action="{{ url('register/creted')}}" method="POST"  class="needs-validation" novalidate>
+    {{ csrf_field() }}
+คำสั่งหมายถึงให้ไปที่ Route::post('register/creted', 'App\Http\Controllers\myController@store');
+โดย request นี้จะเรียก func 'store'ใน myController เป็น func สำหรับการเพิ่มข้อมูลลง db 
+พร้อมกับ return layout,ตัวแปล,สถานะการลงทะเบียน 
+*/
 Route::get('/home', 'App\Http\Controllers\myController@index')->name('home');
 Route::post('search', 'App\Http\Controllers\myController@showInfoRunner');
 
