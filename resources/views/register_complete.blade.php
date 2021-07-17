@@ -6,7 +6,7 @@
     <!-- alert complete enter distance -->
     @if(!empty($success))
         <div class="alert alert-success">ลงทะเบียนวิ่งไร่พัทลุงสำเร็จ 🎉 
-            <h4> <span class="tab2"> รหัสของคุณคือ {{ $id }} </span> </h4>
+            <h4> <span class="tab2"> ID ของคุณคือ {{ $id }} </span> </h4>
     @endif
 
 @endsection

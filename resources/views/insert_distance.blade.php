@@ -34,8 +34,8 @@
 
         <!-- parts 1 -->
         <div class="form-group col-md-12">
-            <label for="input_runner_id"> รหัสประจำตัวนักวิ่ง </label>
-            <input type="text" class="form-control" name="id" id="id" placeholder="ระบุรหัสประจำตัวของคุณ เช่น AAA111" require>
+            <label for="input_runner_id"> ID นักวิ่ง </label>
+            <input type="text" class="form-control" name="id" id="id" placeholder="ระบุ ID ของคุณ เช่น AAA111" require>
         </div>
 
        

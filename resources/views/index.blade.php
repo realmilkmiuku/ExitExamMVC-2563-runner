@@ -24,7 +24,7 @@
         <div class="alert alert-danger"> {{session('error')}} </div>
     @endif
 
-    <!-- alert found info runner -->
+    <!-- alert found info runner การแสดงผลเมื่อค้นหาไอดีนักวิ่ง -->
     @if(!empty($success))
         <div class="alert alert-success">ลงทะเบียนเข้าร่วมโครงการวิ่งไร่พัทลุงแล้ว 🎉 
             <br></br>
@@ -37,6 +37,7 @@
 
     <br>
     <div class="form-row">
+        <!-- ตรวจสอบไอดีนักวิ่ง -->
         <div class="form-group col-md-6">
             <label for="search_id"> ตรวจสอบข้อมูลนักวิ่ง </label>
             <input type="text" class="form-control" name="id" id="id" placeholder="ระบุไอดี " require>

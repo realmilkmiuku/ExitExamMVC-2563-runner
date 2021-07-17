@@ -1,149 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-
-  <!-- ตั้งชื่อ title -->
-  <title>@yield('title')</title> 
-
-  <!-- api Template -->
-  <meta charset="utf-8">
+  <!-- Title -->
+  <title>@yield('title')</title>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Template -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  
+
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
-  <!-- set up theme -->
-  <style>
-    
-    body {
-      font-family: 'Prompt', sans-serif;
-      height: 125%;
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit">
   
-    }
-    .navbar-inverse .navbar-brand {
-      color: #eb5e28;
-    }
-   
-    .navbar-inverse {
-      background-color: #252422;
-      border-color: #252422;
+  <!-- CSS -->
+  <style>
+    body,h1,h2,h3,h4,h5 {
+      font-family: 'Kanit', serif;
     }
 
-    /* Remove the navbar's default margin-bottom and rounded borders */ 
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
+    body {
+      font-size:18px;
     }
 
-    p {
-      color:white;
-      margin-top: 15px;
-    }
-    
-    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {
-      height: 600px;
-      background-color: white;
+
+    .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+    .w3-half img:hover{opacity:1}
+
+    .w3-red, .w3-hover-red:hover {
+      color: #fff!important;
+      background-color: #f44336!important;
     }
 
-    /* Set Nav bar */
-    .sidenav {
-      padding-top: 20px;
-      background-color: #f9f9f9;
-      height: 125%;
-    }
-
-    a {
-      color: #252422;
-      text-decoration: none;
-    }
-
-    a:focus, a:hover {
-      color: #eb5e28;
-      background-color: transparent;
-      text-decoration: underline;
-    }
-
-    .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
-      color: #fff;
-      background-color: #403d39;
-    }
-
-    .tab2 {
-            display: inline-block;
-            margin-left: 40px;
-        }
-
-    /* Set Button */
-
-    .btn-primary {
-      color: #fff;
-      background-color: #d35424;
-      border-color: #d35424;
-    }
-
-    .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
-      color: #fff;
-      background-color: #403d39;
-      border-color: #403d39; /*set the color you want here*/
-    }
-    
-    .btn-link {
-      font-weight: 400;
-      color: #f18e68;
-      border-radius: 0;
-    }
-
-    .btn-link:hover, .btn-link:focus, .btn-link:active, .btn-link.active, .open>.dropdown-toggle.btn-link {
-      color: #a4411c;
-    }
-
-    /* Set black background color, white text and some padding */
-    footer {
-      background-color: #f9f9f9;
-      /* color: white; */
-      padding: 25px;
-    }
-    
-    /* On small screens, set height to 'auto' for sidenav and grid */
-    @media only screen and (max-width: 768px) {
-      .sidenav {
-        height: auto;
-        padding: 15px;
+      a {
+        color: #252422;
+        text-decoration: none;
       }
-      .row.content {
-        height:auto;
-        background-color: white;
-      } 
-    }
-  </style>
-</head>
-<body>
-<!-- header -->
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    
-      <div class="col-sm-6"> 
-        <a class="navbar-brand" href="/">Exit Exam MVC 2/2563 [วิ่งไร่พัทลุง]</a>
-      </div>
 
-      <div class="col-sm-6 text-right"> 
-        <p> 60050214 พัชรธัญ  สุทธิชาติ</p>
-      </div>
+      a:focus, a:hover {
+        color: #f44336;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+
+      .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+        color: #fff;
+        background-color: #282828;
+      }
+
+      /* Set Button */
+      .btn-primary {
+        color: #fff;
+        background-color: #3688f4;
+        border-color: #3688f4;
+      }
+
+      .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+        color: #fff;
+        background-color: #282828;
+        border-color: #282828; /*set the color you want here*/
+      }
       
-   
-  </div>
-</nav>
+      .btn-link {
+        font-weight: 400;
+        font-size: large;
+        color: #f88980;
+        border-radius: 0;
+      }
 
-<!-- Menu [Left] -->
-<div class="container-fluid text-center">    
+      .btn-link:hover, .btn-link:focus, .btn-link:active, .btn-link.active, .open>.dropdown-toggle.btn-link {
+        color: #4f4f4f;
+      }
+
+      .wrap-table100 {
+        width: 100%;
+      }
+
+/*//////////////////////////////////////////////////////////////////
+[ Table ]*/
+.table100 {
+  background-color: #fff;
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  border-bottom:4px solid #d9d9d9;
+}
+
+th, td {
+  text-align-last: center;
+  font-weight: unset;
+}
+
+tr:hover td {
+  background:#fafafa;
+  color:#FFFFFF;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.table100 th {
+  padding-top: 21px;
+  padding-bottom: 21px;
+}
+
+.table100 td {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+
+/*==================================================================
+[ Fix col ]*/
+.table100 {
+  width: 100%;
+  position: relative;
+}
+
+.table100-nextcols table{
+  table-layout: fixed;
+}
+
+.shadow-table100-firstcol {
+  box-shadow: 8px 0px 10px 0px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 8px 0px 10px 0px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 8px 0px 10px 0px rgba(0, 0, 0, 0.05);
+  -o-box-shadow: 8px 0px 10px 0px rgba(0, 0, 0, 0.05);
+  -ms-box-shadow: 8px 0px 10px 0px rgba(0, 0, 0, 0.05);
+}
+
+.table100-firstcol table {
+  background-color: transparent;
+}
+
+/*==================================================================
+[ Ver1 ]*/
+
+.table100.ver1 th {
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #e6e6e6;
+}
+
+.table100.ver1 td {
+  font-size: 16px;
+  color: #282828;
+  font-weight: lighter;
+}
+
+.table100.ver1 tr {
+  border-bottom: 1px solid #f2f2f2;
+}
+
+  </style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>ExitExam MVC <br>อาทิตย์บ่าย ข้อ2<br>3/2563</b> </h3>
+  </div>
+  <div class="w3-bar-block">
   <div class="row content">
+
     <!-- Menu -->
-    <div class="col-sm-2 sidenav">
+    <div class="col-sm-12 sidenav">
         <ul class="nav nav-pills nav-stacked ">
             <li class="{{ Request::path() ==  'home' ? 'active' : ''  }}">
               <a href="{{ route('home') }}">หน้าหลัก</a></li>
@@ -163,21 +191,38 @@
        a href ลิงก์  url สัมพันธ์กะ route ข้องกะ =njvsohk-->
 
     </div>
-    <!-- content [Center] -->
-    <div class="col-sm-9 text-left"> 
-      <h1>@yield('header', 'Input Teams')</h1>  <!-- Template หน้าเว็บ ในการกำหนดหัวข้อ -->
-      <hr>
-    @yield('text')  <!-- Template หน้าเว็บ ในการใส่เนื้อหา -->
-    </div>
-    <!-- [Right] -->
-    
   </div>
-</div>
+</nav>
 
- <!-- footer -->
-<footer class="container-fluidc text-center">
-  <p> </p>
-</footer>
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>ExitExam MVC 3/2563</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container w3-padding-16" style="margin-top:15px;padding-right:5px"><p class="w3-right">60050214 พัชรธัญ สุทธิชาติ </p></div>
+
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-xxxlarge w3-text-red"><b>@yield('header', 'Input Teams')</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+  
+ 
+  <!-- Content -->
+    <p>@yield('text')</p>
+ 
+  </div>
+  
+
+<!-- End page content -->
+</div>
 
 </body>
 </html>
