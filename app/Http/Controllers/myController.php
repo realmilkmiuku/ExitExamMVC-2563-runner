@@ -33,7 +33,7 @@ class myController extends Controller
 
             //กรณีระบุ IDไม่ครบหรือผิดพลาด จะส่ง messege error กลับไป 
             if(count($check_runner) == 0) {
-                return back()->withError('ไม่พบข้อมูลนักวิ่งรหัสประจำตัวนักวิ่งนี้ กรุณาตรวจสอบใหม่')->withInput();
+                return back()->withError('ไม่พบข้อมูลนักวิ่ง ID นี้ กรุณาตรวจสอบใหม่')->withInput();
             }
             
             //ดึงข้อมูลจาก DB มาเก็บไว้ในตัวแปล
@@ -122,7 +122,7 @@ class myController extends Controller
 
             //กรณีระบุ IDไม่ครบหรือผิดพลาด จะส่ง messege error กลับไป 
             if(count($check_runner) == 0) {
-                return back()->withError('ไม่พบรหัสประจำตัวนักวิ่งของคุณ กรุณาตรวจสอบใหม่')->withInput();
+                return back()->withError('ไม่พบข้อมูลนักวิ่ง ID นี้ กรุณาตรวจสอบใหม่')->withInput();
             }
 
             //กรณีระบุระยะทางเกิน 10 กิโลเมตร จะส่ง messege error กลับไป 
