@@ -25,12 +25,13 @@ class myController extends Controller
 
         $id = $request['id'];
 
-        //ตรวจสอบข้อมูลนักวิ่งบน DB
+        //ตรวจสอบข้อมูลนักวิ่งบน DB แล้วเก็บไว้ในตัวแปล
         try {
             $check_runner = DB::table('runners')
             ->where('runner_id', $request->id)
             ->get();
 
+            //กรณีระบุ IDไม่ครบหรือผิดพลาด จะส่ง messege error กลับไป 
             if(count($check_runner) == 0) {
                 return back()->withError('ไม่พบข้อมูลนักวิ่งรหัสประจำตัวนักวิ่งนี้ กรุณาตรวจสอบใหม่')->withInput();
             }
