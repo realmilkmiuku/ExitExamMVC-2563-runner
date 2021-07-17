@@ -167,7 +167,8 @@ class myController extends Controller
         $rank_runner  = DB::table('runners')
             ->where('Distance','>',42.195)
             ->limit(10)
-            ->orderBy('Distance')
+            ->orderBy('Distance','DESC')
+            
             ->get();
         return view('rank_runner', compact('rank_runner'));
     }
